@@ -22,38 +22,38 @@ Partial Class Pick_Shape_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Pick_Triangle_Button = New System.Windows.Forms.Button()
+        Me.Pick_Rectangle_Button = New System.Windows.Forms.Button()
+        Me.Pick_Circle_Button = New System.Windows.Forms.Button()
         Me.Welcome_Label = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'Pick_Triangle_Button
         '
-        Me.Button1.Location = New System.Drawing.Point(9, 46)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 39)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Triangle"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Pick_Triangle_Button.Location = New System.Drawing.Point(9, 46)
+        Me.Pick_Triangle_Button.Name = "Pick_Triangle_Button"
+        Me.Pick_Triangle_Button.Size = New System.Drawing.Size(89, 39)
+        Me.Pick_Triangle_Button.TabIndex = 0
+        Me.Pick_Triangle_Button.Text = "Triangle"
+        Me.Pick_Triangle_Button.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Pick_Rectangle_Button
         '
-        Me.Button4.Location = New System.Drawing.Point(9, 121)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(89, 39)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Rectangle"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Pick_Rectangle_Button.Location = New System.Drawing.Point(9, 121)
+        Me.Pick_Rectangle_Button.Name = "Pick_Rectangle_Button"
+        Me.Pick_Rectangle_Button.Size = New System.Drawing.Size(89, 39)
+        Me.Pick_Rectangle_Button.TabIndex = 3
+        Me.Pick_Rectangle_Button.Text = "Rectangle"
+        Me.Pick_Rectangle_Button.UseVisualStyleBackColor = True
         '
-        'Button5
+        'Pick_Circle_Button
         '
-        Me.Button5.Location = New System.Drawing.Point(9, 196)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(89, 39)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Circle"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Pick_Circle_Button.Location = New System.Drawing.Point(9, 196)
+        Me.Pick_Circle_Button.Name = "Pick_Circle_Button"
+        Me.Pick_Circle_Button.Size = New System.Drawing.Size(89, 39)
+        Me.Pick_Circle_Button.TabIndex = 4
+        Me.Pick_Circle_Button.Text = "Circle"
+        Me.Pick_Circle_Button.UseVisualStyleBackColor = True
         '
         'Welcome_Label
         '
@@ -70,17 +70,17 @@ Partial Class Pick_Shape_Form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(282, 253)
         Me.Controls.Add(Me.Welcome_Label)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Pick_Circle_Button)
+        Me.Controls.Add(Me.Pick_Rectangle_Button)
+        Me.Controls.Add(Me.Pick_Triangle_Button)
         Me.Name = "Pick_Shape_Form"
         Me.Text = "Pick Shape"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Pick_Triangle_Button As Button
+    Friend WithEvents Pick_Rectangle_Button As Button
+    Friend WithEvents Pick_Circle_Button As Button
     Friend WithEvents Welcome_Label As Label
 End Class

@@ -156,6 +156,9 @@
     <EmbeddedResource Include="Student\Pick_Shape_Form.resx">
       <DependentUpon>Pick_Shape_Form.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student\Shapes\Circle_Practice_Form.resx">
+      <DependentUpon>Circle_Practice_Form.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />
