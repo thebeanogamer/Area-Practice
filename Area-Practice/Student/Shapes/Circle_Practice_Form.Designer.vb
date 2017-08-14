@@ -31,6 +31,7 @@ Partial Class Circle_Practice_Form
         Me.Circle_Radius_Label = New System.Windows.Forms.Label()
         Me.Circle_Points_Label = New System.Windows.Forms.Label()
         Me.Circle_Exit_Button = New System.Windows.Forms.Button()
+        Me.Circle_Question_Number_Label = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Circle_Label
@@ -91,13 +92,13 @@ Partial Class Circle_Practice_Form
         '
         'Circle_Radius_Label
         '
-        Me.Circle_Radius_Label.AutoSize = True
         Me.Circle_Radius_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Circle_Radius_Label.Location = New System.Drawing.Point(245, 145)
+        Me.Circle_Radius_Label.Location = New System.Drawing.Point(311, 145)
         Me.Circle_Radius_Label.Name = "Circle_Radius_Label"
-        Me.Circle_Radius_Label.Size = New System.Drawing.Size(225, 25)
+        Me.Circle_Radius_Label.Size = New System.Drawing.Size(159, 25)
         Me.Circle_Radius_Label.TabIndex = 6
         Me.Circle_Radius_Label.Text = "Radius = <Radius Here>"
+        Me.Circle_Radius_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Circle_Points_Label
         '
@@ -117,14 +118,25 @@ Partial Class Circle_Practice_Form
         Me.Circle_Exit_Button.Text = "Exit"
         Me.Circle_Exit_Button.UseVisualStyleBackColor = True
         '
+        'Circle_Question_Number_Label
+        '
+        Me.Circle_Question_Number_Label.AutoSize = True
+        Me.Circle_Question_Number_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Circle_Question_Number_Label.Location = New System.Drawing.Point(93, 9)
+        Me.Circle_Question_Number_Label.Name = "Circle_Question_Number_Label"
+        Me.Circle_Question_Number_Label.Size = New System.Drawing.Size(161, 32)
+        Me.Circle_Question_Number_Label.TabIndex = 9
+        Me.Circle_Question_Number_Label.Text = "Question: 0"
+        '
         'Circle_Practice_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 453)
+        Me.Controls.Add(Me.Circle_Question_Number_Label)
+        Me.Controls.Add(Me.Circle_Radius_Label)
         Me.Controls.Add(Me.Circle_Exit_Button)
         Me.Controls.Add(Me.Circle_Points_Label)
-        Me.Controls.Add(Me.Circle_Radius_Label)
         Me.Controls.Add(Me.Circle_Option_4_Button)
         Me.Controls.Add(Me.Circle_Option_3_Button)
         Me.Controls.Add(Me.Circle_Option_2_Button)
@@ -147,4 +159,5 @@ Partial Class Circle_Practice_Form
     Friend WithEvents Circle_Radius_Label As Label
     Friend WithEvents Circle_Points_Label As Label
     Friend WithEvents Circle_Exit_Button As Button
+    Friend WithEvents Circle_Question_Number_Label As Label
 End Class

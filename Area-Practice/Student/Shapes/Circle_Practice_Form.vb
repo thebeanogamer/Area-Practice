@@ -1,5 +1,29 @@
 ﻿Public Class Circle_Practice_Form
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Circle_Points_Label.Click
+    Public Shared Circle_Correct_Button_Number As Integer
+    Private Sub Circle_Option_1_Button_Click(sender As Object, e As EventArgs) Handles Circle_Option_1_Button.Click
+        Pick_Shape_Form.Circle_Button_Pressed = 0
+        Check_Answer_Module.Check_Circle_Sub()
+    End Sub
 
+    Private Sub Circle_Option_2_Button_Click(sender As Object, e As EventArgs) Handles Circle_Option_2_Button.Click
+        Pick_Shape_Form.Circle_Button_Pressed = 1
+        Check_Answer_Module.Check_Circle_Sub()
+    End Sub
+
+    Private Sub Circle_Option_3_Button_Click(sender As Object, e As EventArgs) Handles Circle_Option_3_Button.Click
+        Pick_Shape_Form.Circle_Button_Pressed = 2
+        Check_Answer_Module.Check_Circle_Sub()
+    End Sub
+
+    Private Sub Circle_Option_4_Button_Click(sender As Object, e As EventArgs) Handles Circle_Option_4_Button.Click
+        Pick_Shape_Form.Circle_Button_Pressed = 3
+        Check_Answer_Module.Check_Circle_Sub()
+    End Sub
+
+    Private Sub Circle_Exit_Button_Click(sender As Object, e As EventArgs) Handles Circle_Exit_Button.Click
+        Dim Circle_Exit_Message As String
+        Circle_Exit_Message = ("Congratulations, you scored" + Str(Pick_Shape_Form.Circle_Points) + " points!")
+        MsgBox(Circle_Exit_Message, MsgBoxStyle.Exclamation, "Congratulations")
+        Me.Close()
     End Sub
 End Class
