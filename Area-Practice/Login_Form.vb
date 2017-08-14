@@ -10,5 +10,6 @@
         Fullname = "Testing McTestiname"
         Pick_Shape_Form.Show()
         Pick_Shape_Form.Welcome_Label.Text = ("Welcome " + Fullname)
+        Me.Hide()
     End Sub
 End Class
