@@ -51,4 +51,61 @@
         Pick_Shape_Form.Circle_Question_Number = Pick_Shape_Form.Circle_Question_Number + 1
         Circle_Practice_Form.Circle_Question_Number_Label.Text() = ("Question: " + Str(Pick_Shape_Form.Circle_Question_Number))
     End Sub
+    Public Sub Create_Triangle_Question_Class()
+        Dim Triangle_Answer As Double
+        Dim Triangle_Height As Double
+        Dim Triangle_Width As Double
+        Dim Triangle_Button_Array(4)
+        Dim Triangle_Incorrect_Answer_1 As String
+        Dim Triangle_Incorrect_Answer_2 As String
+        Dim Triangle_Incorrect_Answer_3 As String
+        Dim Random_Function As New Random
+        Dim Triangle_Answer_Multiplied As Integer
+        ' Setup variables to store information required for question
+        Triangle_Practice_Form.Triangle_Points_Label.Text() = ("Points: " + Str(Pick_Shape_Form.Triangle_Points))
+        Triangle_Button_Array(0) = Triangle_Practice_Form.Triangle_Option_1_Button
+        Triangle_Button_Array(1) = Triangle_Practice_Form.Triangle_Option_2_Button
+        Triangle_Button_Array(2) = Triangle_Practice_Form.Triangle_Option_3_Button
+        Triangle_Button_Array(3) = Triangle_Practice_Form.Triangle_Option_4_Button
+        ' Fill in array of buttons on the Triangle form
+        Triangle_Height = Random_Function.Next(1, 20)
+        ' Randomly generate a number between 1 and 20 to be the Triangle's height
+        Triangle_Width = Random_Function.Next(1, 20)
+        ' Randomly generate a number between 1 and 20 to be the Triangle's width
+        Triangle_Practice_Form.Triangle_Height_Label.Text = ("Height = " + Str(Triangle_Height) + "cm")
+        Triangle_Practice_Form.Triangle_Width_Label.Text = ("Width = " + Str(Triangle_Width) + "cm")
+        ' Write the height and width to the form
+        Triangle_Answer = (0.5 * (Triangle_Height * Triangle_Width))
+        ' Calculate the area of the Triangle
+        Triangle_Practice_Form.Triangle_Correct_Button_Number = Random_Function.Next(0, 3)
+        ' Randomly choose which button should contain the correct answer
+        Triangle_Answer = Math.Round(Triangle_Answer, 2)
+        ' Round the answer to 2 dp
+        Triangle_Button_Array(Triangle_Practice_Form.Triangle_Correct_Button_Number).Text() = (Str(Triangle_Answer) + " cm²")
+        ' Write the correct answer to the chosen button
+        Triangle_Answer_Multiplied = Triangle_Answer * 100
+        Triangle_Incorrect_Answer_1 = (Str((Random_Function.Next(Triangle_Answer_Multiplied - 499, Triangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        Triangle_Incorrect_Answer_2 = (Str((Random_Function.Next(Triangle_Answer_Multiplied - 499, Triangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        Triangle_Incorrect_Answer_3 = (Str((Random_Function.Next(Triangle_Answer_Multiplied - 499, Triangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        If Triangle_Practice_Form.Triangle_Correct_Button_Number = 0 Then
+            Triangle_Button_Array(1).Text() = Triangle_Incorrect_Answer_1
+            Triangle_Button_Array(2).Text() = Triangle_Incorrect_Answer_2
+            Triangle_Button_Array(3).Text() = Triangle_Incorrect_Answer_3
+        ElseIf Triangle_Practice_Form.Triangle_Correct_Button_Number = 1 Then
+            Triangle_Button_Array(0).Text() = Triangle_Incorrect_Answer_1
+            Triangle_Button_Array(2).Text() = Triangle_Incorrect_Answer_2
+            Triangle_Button_Array(3).Text() = Triangle_Incorrect_Answer_3
+        ElseIf Triangle_Practice_Form.Triangle_Correct_Button_Number = 2 Then
+            Triangle_Button_Array(0).Text() = Triangle_Incorrect_Answer_1
+            Triangle_Button_Array(1).Text() = Triangle_Incorrect_Answer_2
+            Triangle_Button_Array(3).Text() = Triangle_Incorrect_Answer_3
+        ElseIf Triangle_Practice_Form.Triangle_Correct_Button_Number = 3 Then
+            Triangle_Button_Array(0).Text() = Triangle_Incorrect_Answer_1
+            Triangle_Button_Array(1).Text() = Triangle_Incorrect_Answer_2
+            Triangle_Button_Array(2).Text() = Triangle_Incorrect_Answer_3
+        End If
+        Pick_Shape_Form.Triangle_Question_Number = Pick_Shape_Form.Triangle_Question_Number + 1
+        Triangle_Practice_Form.Triangle_Question_Number_Label.Text() = ("Question: " + Str(Pick_Shape_Form.Triangle_Question_Number))
+    End Sub
+
 End Module

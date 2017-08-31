@@ -1,3 +1,3 @@
-﻿Public Class Rectangle_Practice_Form
+﻿Public Class Rectangle
 
 End Class
