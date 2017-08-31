@@ -26,6 +26,7 @@ Partial Class Pick_Shape_Form
         Me.Pick_Rectangle_Button = New System.Windows.Forms.Button()
         Me.Pick_Circle_Button = New System.Windows.Forms.Button()
         Me.Welcome_Label = New System.Windows.Forms.Label()
+        Me.Open_About_Button = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Pick_Triangle_Button
@@ -64,11 +65,21 @@ Partial Class Pick_Shape_Form
         Me.Welcome_Label.Text = "Welome <Name Here>"
         Me.Welcome_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Open_About_Button
+        '
+        Me.Open_About_Button.Location = New System.Drawing.Point(201, 209)
+        Me.Open_About_Button.Name = "Open_About_Button"
+        Me.Open_About_Button.Size = New System.Drawing.Size(69, 32)
+        Me.Open_About_Button.TabIndex = 6
+        Me.Open_About_Button.Text = "About"
+        Me.Open_About_Button.UseVisualStyleBackColor = True
+        '
         'Pick_Shape_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.Controls.Add(Me.Open_About_Button)
         Me.Controls.Add(Me.Welcome_Label)
         Me.Controls.Add(Me.Pick_Circle_Button)
         Me.Controls.Add(Me.Pick_Rectangle_Button)
@@ -83,4 +94,5 @@ Partial Class Pick_Shape_Form
     Friend WithEvents Pick_Rectangle_Button As Button
     Friend WithEvents Pick_Circle_Button As Button
     Friend WithEvents Welcome_Label As Label
+    Friend WithEvents Open_About_Button As Button
 End Class

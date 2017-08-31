@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -9,10 +10,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Area-Practice")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("This is a simple program to practice calculating the area of shapes.        Logo created by Madebyoliver for www.flaticon.com under Creative Commons 3.0")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Area-Practice")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 Daniel Milnes")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -33,3 +34,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: NeutralResourcesLanguage("en-GB")>

@@ -22,4 +22,8 @@
         Create_Circle_Question_Class()
         Circle_Practice_Form.Show()
     End Sub
+
+    Private Sub Open_About_Button_Click(sender As Object, e As EventArgs) Handles Open_About_Button.Click
+        About_Box.Show()
+    End Sub
 End Class
