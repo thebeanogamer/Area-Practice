@@ -1,4 +1,4 @@
-## Welcome to the website for Area-Practice
+## Welcome to the website for Area-Practice [![Build Status](https://travis-ci.org/thebeanogamer/Area-Practice.svg?branch=master)](https://travis-ci.org/thebeanogamer/Area-Practice)
 
 Welcome to the website for the Area-Practice program. This is a simple program I created as part of learning Visual Basic. This program allows the user to practice calculating the area of shapes.
 
