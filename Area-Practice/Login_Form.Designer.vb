@@ -22,24 +22,28 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Temp_Login_Button = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Temp_Login_Button
         '
-        Me.Temp_Login_Button.Location = New System.Drawing.Point(73, 79)
+        Me.Temp_Login_Button.Location = New System.Drawing.Point(55, 64)
+        Me.Temp_Login_Button.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Temp_Login_Button.Name = "Temp_Login_Button"
-        Me.Temp_Login_Button.Size = New System.Drawing.Size(132, 82)
+        Me.Temp_Login_Button.Size = New System.Drawing.Size(99, 67)
         Me.Temp_Login_Button.TabIndex = 0
         Me.Temp_Login_Button.Text = "Login"
         Me.Temp_Login_Button.UseVisualStyleBackColor = True
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.ClientSize = New System.Drawing.Size(212, 206)
         Me.Controls.Add(Me.Temp_Login_Button)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Login"
         Me.Text = "Login"
         Me.ResumeLayout(False)

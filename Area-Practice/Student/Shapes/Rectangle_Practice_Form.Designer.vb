@@ -22,6 +22,7 @@ Partial Class Rectangle_Practice_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Rectangle_Practice_Form))
         Me.Rectangle_Width_Label = New System.Windows.Forms.Label()
         Me.Rectangle_Question_Number_Label = New System.Windows.Forms.Label()
         Me.Rectangle_Height_Label = New System.Windows.Forms.Label()
@@ -166,6 +167,7 @@ Partial Class Rectangle_Practice_Form
         Me.Controls.Add(Me.Rectangle_Option_1_Button)
         Me.Controls.Add(Me.Rectangle_Question_Label)
         Me.Controls.Add(Me.Rectangle_Label)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Rectangle_Practice_Form"
         Me.Text = "Rectangle"
         Me.ResumeLayout(False)
