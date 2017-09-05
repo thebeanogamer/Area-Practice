@@ -7,6 +7,10 @@
     Public Shared Triangle_Points As Integer
     Public Shared Triangle_Button_Pressed As Integer
     Public Shared Triangle_Question_Number As Integer
+    Public Shared Rectangle_Guess As Integer = 0
+    Public Shared Rectangle_Points As Integer
+    Public Shared Rectangle_Button_Pressed As Integer
+    Public Shared Rectangle_Question_Number As Integer
     Private Sub Pick_Triangle_Button_Click(sender As Object, e As EventArgs) Handles Pick_Triangle_Button.Click
         Triangle_Points = 0
         Create_Triangle_Question_Class()
@@ -14,7 +18,9 @@
     End Sub
 
     Private Sub Pick_Rectangle_Button_Click(sender As Object, e As EventArgs) Handles Pick_Rectangle_Button.Click
-        Rectangle.Show()
+        Rectangle_Points = 0
+        Create_Rectangle_Question_Class()
+        Rectangle_Practice_Form.Show()
     End Sub
 
     Private Sub Pick_Circle_Button_Click(sender As Object, e As EventArgs) Handles Pick_Circle_Button.Click

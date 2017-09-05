@@ -107,5 +107,60 @@
         Pick_Shape_Form.Triangle_Question_Number = Pick_Shape_Form.Triangle_Question_Number + 1
         Triangle_Practice_Form.Triangle_Question_Number_Label.Text() = ("Question: " + Str(Pick_Shape_Form.Triangle_Question_Number))
     End Sub
-
+    Public Sub Create_Rectangle_Question_Class()
+        Dim Rectangle_Answer As Double
+        Dim Rectangle_Height As Double
+        Dim Rectangle_Width As Double
+        Dim Rectangle_Button_Array(4)
+        Dim Rectangle_Incorrect_Answer_1 As String
+        Dim Rectangle_Incorrect_Answer_2 As String
+        Dim Rectangle_Incorrect_Answer_3 As String
+        Dim Random_Function As New Random
+        Dim Rectangle_Answer_Multiplied As Integer
+        ' Setup variables to store information required for question
+        Rectangle_Practice_Form.Rectangle_Points_Label.Text() = ("Points: " + Str(Pick_Shape_Form.Rectangle_Points))
+        Rectangle_Button_Array(0) = Rectangle_Practice_Form.Rectangle_Option_1_Button
+        Rectangle_Button_Array(1) = Rectangle_Practice_Form.Rectangle_Option_2_Button
+        Rectangle_Button_Array(2) = Rectangle_Practice_Form.Rectangle_Option_3_Button
+        Rectangle_Button_Array(3) = Rectangle_Practice_Form.Rectangle_Option_4_Button
+        ' Fill in array of buttons on the Rectangle form
+        Rectangle_Height = Random_Function.Next(1, 20)
+        ' Randomly generate a number between 1 and 20 to be the Rectangle's height
+        Rectangle_Width = Random_Function.Next(1, 20)
+        ' Randomly generate a number between 1 and 20 to be the Rectangle's width
+        Rectangle_Practice_Form.Rectangle_Height_Label.Text = ("Height = " + Str(Rectangle_Height) + "cm")
+        Rectangle_Practice_Form.Rectangle_Width_Label.Text = ("Width = " + Str(Rectangle_Width) + "cm")
+        ' Write the height and width to the form
+        Rectangle_Answer = (Rectangle_Height * Rectangle_Width)
+        ' Calculate the area of the Rectangle
+        Rectangle_Practice_Form.Rectangle_Correct_Button_Number = Random_Function.Next(0, 3)
+        ' Randomly choose which button should contain the correct answer
+        Rectangle_Answer = Math.Round(Rectangle_Answer, 2)
+        ' Round the answer to 2 dp
+        Rectangle_Button_Array(Rectangle_Practice_Form.Rectangle_Correct_Button_Number).Text() = (Str(Rectangle_Answer) + " cm²")
+        ' Write the correct answer to the chosen button
+        Rectangle_Answer_Multiplied = Rectangle_Answer * 100
+        Rectangle_Incorrect_Answer_1 = (Str((Random_Function.Next(Rectangle_Answer_Multiplied - 499, Rectangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        Rectangle_Incorrect_Answer_2 = (Str((Random_Function.Next(Rectangle_Answer_Multiplied - 499, Rectangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        Rectangle_Incorrect_Answer_3 = (Str((Random_Function.Next(Rectangle_Answer_Multiplied - 499, Rectangle_Answer_Multiplied + 499)) / 100) + " cm²")
+        If Rectangle_Practice_Form.Rectangle_Correct_Button_Number = 0 Then
+            Rectangle_Button_Array(1).Text() = Rectangle_Incorrect_Answer_1
+            Rectangle_Button_Array(2).Text() = Rectangle_Incorrect_Answer_2
+            Rectangle_Button_Array(3).Text() = Rectangle_Incorrect_Answer_3
+        ElseIf Rectangle_Practice_Form.Rectangle_Correct_Button_Number = 1 Then
+            Rectangle_Button_Array(0).Text() = Rectangle_Incorrect_Answer_1
+            Rectangle_Button_Array(2).Text() = Rectangle_Incorrect_Answer_2
+            Rectangle_Button_Array(3).Text() = Rectangle_Incorrect_Answer_3
+        ElseIf Rectangle_Practice_Form.Rectangle_Correct_Button_Number = 2 Then
+            Rectangle_Button_Array(0).Text() = Rectangle_Incorrect_Answer_1
+            Rectangle_Button_Array(1).Text() = Rectangle_Incorrect_Answer_2
+            Rectangle_Button_Array(3).Text() = Rectangle_Incorrect_Answer_3
+        ElseIf Rectangle_Practice_Form.Rectangle_Correct_Button_Number = 3 Then
+            Rectangle_Button_Array(0).Text() = Rectangle_Incorrect_Answer_1
+            Rectangle_Button_Array(1).Text() = Rectangle_Incorrect_Answer_2
+            Rectangle_Button_Array(2).Text() = Rectangle_Incorrect_Answer_3
+        End If
+        Pick_Shape_Form.Rectangle_Question_Number = Pick_Shape_Form.Rectangle_Question_Number + 1
+        Rectangle_Practice_Form.Rectangle_Question_Number_Label.Text() = ("Question: " + Str(Pick_Shape_Form.Rectangle_Question_Number))
+    End Sub
 End Module
